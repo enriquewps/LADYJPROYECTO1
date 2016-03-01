@@ -38,16 +38,15 @@
         
         Esto insertará el código del archivo solicitado tal cual.
         -->
-        <div><h1>Haga una petici&oacute;n</h1>
-            <p>N&uacute;mero de peticiones hechas:
-            #{anfitrion.contador}</p>
-            <p>Cadena manipulada:
-            "#{anfitrion.AManipular}"</p>
+        <div><h1>Ingrese sus datos</h1>
+            
             <h:form >
-                Cadena a manipular:
-                <h:inputText id="valor-cadena" binding="#{cadena}" />
+           
+                <h:inputText id="nombreCapturista" binding="#{nombre}" />
+                 <h:inputText id="ventaBruta" binding="#{ventab}" />
+                  <h:inputText id="fecha" binding="#{fecha}" />
                 <h:commandButton id="solicitar" value="Hacer petici&oacute;n"
-                                 action="#{anfitrion.atiende(cadena.value)}" />
+                                 action="#{login.calculaVentaNeta(ventab.value)}" />
                 <!--
                 Si necesitara validar un rango en un dato de entrada, puede usar
                 algo como lo siguiente con las etiqeutas "f:"
@@ -57,7 +56,7 @@
                 -->
             </h:form>
             <hr/>
-            <p>Nachintoch estuvo aqu&iacute;</p>
+            
         </div>
     </body>
 </html>
